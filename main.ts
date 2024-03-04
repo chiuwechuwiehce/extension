@@ -1,3 +1,6 @@
+enum RadioMessage {
+    message1 = 49434
+}
 namespace extras {
     /**
      * Lights a random tile.
@@ -29,11 +32,10 @@ namespace extras {
         let multiply = num
         let answer = 0
         if (num <= -1){
-            return;
+            return 0;
         }
         if (num == 0 || num == 1){
-            basic.showNumber(1)
-            return;
+            return 1;
         }
         answer = num
         while (multiply >= 3) {
@@ -41,5 +43,6 @@ namespace extras {
             answer = answer * multiply
         }
         result = answer
+        return result;
     }
 }

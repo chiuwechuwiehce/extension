@@ -40,5 +40,6 @@ namespace extras {
             multiply = multiply - 1
             answer = answer * multiply
         }
+        result()
     }
 }

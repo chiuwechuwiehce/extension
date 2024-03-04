@@ -20,4 +20,24 @@ namespace extras {
         let randbright = randint(0,255)
         led.plotBrightness(randx2, randy2,randbright)
     }
+    export function factorial(num : number): void {
+        let multiply = 0
+        let answer = 0
+        if (num <= -1){
+            return;
+        }
+        if (num == 0 || num == 1){
+            basic.showNumber(1)
+            return;
+        }
+        answer = num
+        basic.forever(function() {
+            if (multiply == 0){
+                return;
+            }
+            multiply = num - 1
+            answer = answer * multiply
+        })
+        basic.showNumber(answer)
+    }
 }

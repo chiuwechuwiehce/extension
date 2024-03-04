@@ -1,10 +1,12 @@
-namespace special {
+namespace extras {
     /**
      * Idk yet.
      */
     //% blockId="specialthingy"
     //% block="5"
-    export function thingy(): void{
-        basic.showNumber(5)
+    export function randomtile(): void{
+        let randx = randint(1,5)
+        let randy = randint(1,5)
+        led.plot(randx,randy)
     }
 }

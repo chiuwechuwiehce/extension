@@ -25,7 +25,7 @@ namespace extras {
      * Prints a factorial.
      */
     //% blockId="specialfactorial"
-    //% block="factorial $num"
+    //% block="factorial $num $factorialnumber"
     export function factorial(num : number): void {
         let multiply = num
         let answer = 0

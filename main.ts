@@ -39,6 +39,7 @@ namespace extras {
         while (multiply >= 1) {
             multiply = num - 1
             answer = answer * multiply
+            basic.showNumber(answer)
         }
         basic.showNumber(answer)
     }

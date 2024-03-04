@@ -1,4 +1,5 @@
 namespace extras {
+    export let factorialnumber = 0
     /**
      * Lights a random tile.
      */
@@ -36,10 +37,10 @@ namespace extras {
             return;
         }
         answer = num
-        while (multiply >= 2) {
+        while (multiply >= 3) {
             multiply = multiply - 1
             answer = answer * multiply
         }
-        basic.showNumber(answer)
+        factorialnumber = answer
     }
 }

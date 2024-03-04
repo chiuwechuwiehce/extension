@@ -10,7 +10,7 @@ namespace extras {
         led.plot(randx,randy)
     }
     /**
-     * Lights a random tile. with random transparency.
+     * Lights a random tile with random transparency.
      */
     //% blockId="specialrandomtiletransparency"
     //% block="light random transparency tile"
@@ -20,6 +20,11 @@ namespace extras {
         let randbright = randint(0,255)
         led.plotBrightness(randx2, randy2,randbright)
     }
+    /**
+     * Prints a factorial.
+     */
+    //% blockId="specialfactorial"
+    //% block="factorial $num"
     export function factorial(num : number): void {
         let multiply = 0
         let answer = 0

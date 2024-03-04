@@ -36,13 +36,10 @@ namespace extras {
             return;
         }
         answer = num
-        basic.forever(function() {
-            if (multiply == 0){
-                return;
-            }
+        while (multiply >= 1) {
             multiply = num - 1
             answer = answer * multiply
-        })
+        }
         basic.showNumber(answer)
     }
 }

@@ -26,7 +26,7 @@ namespace extras {
      */
     //% blockId="specialfactorial"
     //% block="factorial $num $factorialnumber"
-    export function factorial(num : number): void {
+    export function factorial(num : number, cb: (receivedNumber: number) => void) {
         let multiply = num
         let answer = 0
         if (num <= -1){

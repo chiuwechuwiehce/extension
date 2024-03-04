@@ -1,5 +1,4 @@
 namespace extras {
-    let thingy: (result: number) => void;
     /**
      * Lights a random tile.
      */
@@ -26,7 +25,7 @@ namespace extras {
      */
     //% blockId="specialfactorial"
     //% block="factorial $num $factorialnumber"
-    export function factorial(num : number, cb: (result: number) => void) {
+    export function factorial(num : number, result : number) {
         let multiply = num
         let answer = 0
         if (num <= -1){
@@ -41,6 +40,6 @@ namespace extras {
             multiply = multiply - 1
             answer = answer * multiply
         }
-        thingy = cb
+        result = answer
     }
 }

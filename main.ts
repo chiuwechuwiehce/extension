@@ -71,6 +71,23 @@ namespace Math {
         }
         return answer;
     }
+    /**
+     * Outputs the sigma of the numbers.
+     */
+    //% blockId="specialfactorial"
+    //% block="sigma min $min max $max"
+    export function sigma(min: number,max: number) {
+        let addby = min
+        let answer = min
+        if (min <= 0||max <= 0) {
+            return 0;
+        }
+        while (addby >= max - 1) {
+            addby+=1
+            answer = answer + addby
+        }
+        return answer;
+    }
 }
 // More Leds
 namespace led {

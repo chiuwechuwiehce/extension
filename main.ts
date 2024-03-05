@@ -74,7 +74,7 @@ namespace Math {
     /**
      * Outputs the sigma of the numbers.
      */
-    //% blockId="specialfactorial"
+    //% blockId="specialsigma"
     //% block="sigma min $min max $max"
     export function sigma(min: number,max: number) {
         let addby = min

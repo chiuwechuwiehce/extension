@@ -181,7 +181,7 @@ namespace extraLed {
             return 0;
         }
         grabcoordsbyindex(numm)
-        return coords;
+        return coords[1];
     }
     /**
      * Plots an led using number instead of position.

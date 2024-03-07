@@ -84,7 +84,7 @@ namespace Math {
         }
         while (addby >= max - 1) {
             addby += 1
-            answer = answer + addby
+            answer += addby
         }
         return answer;
     }

@@ -82,7 +82,7 @@ namespace Math {
         if (min <= 0||max <= 0) {
             return 0;
         }
-        while (addby >= max - 1) {
+        while (addby <= max - 1) {
             addby += 1
             answer += addby
         }

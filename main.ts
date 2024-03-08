@@ -260,6 +260,7 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
+                basic.clearScreen()
                 runframes += 1
             }
             return
@@ -270,6 +271,7 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
+                basic.clearScreen()
                 runframes += 1
             }
         }

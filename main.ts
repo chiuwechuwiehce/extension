@@ -1,5 +1,5 @@
 // Functions
-function animateframes(interval:number,frames:any[]) {
+function animateframes(interval:number,frames:Image[]) {
     let runframes = 0
 	while (runframes <= frames.length - 1){
         frames[runframes].showImage(0)

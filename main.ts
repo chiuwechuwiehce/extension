@@ -250,7 +250,7 @@ namespace extraLed {
      */
     //% blockId="specialanimatepixel"
     //% block="animate pixel $table with interval $interval ,$repeat times"
-    export function animatepixel(interval: number, table: number[], repeat: number) {
+    export function animatepixel(interval: number, table: number[], repeat: number, deleteonend: boolean) {
         if (repeat <= -1) {
             return
         }
@@ -260,6 +260,11 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
+                if (runframes <= table.length - 2){
+                    if (deleteonend == false){
+                        return
+                    }
+                }
                 basic.clearScreen()
                 runframes += 1
             }
@@ -271,6 +276,11 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
+                if (runframes <= table.length - 2) {
+                    if (deleteonend == false) {
+                        return
+                    }
+                }
                 basic.clearScreen()
                 runframes += 1
             }

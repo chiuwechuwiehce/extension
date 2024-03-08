@@ -1,38 +1,13 @@
-// Enums
-
-// Variables
-let gibc = 0
-let canaddhealthvar = true
-let coords = [0, 0]
-let poses = [
-    [0, 0],
-    [1, 0],
-    [2, 0],
-    [3, 0],
-    [4, 0],
-    [0, 1],
-    [1, 1],
-    [2, 1],
-    [3, 1],
-    [4, 1],
-    [0, 2],
-    [1, 2],
-    [2, 2],
-    [3, 2],
-    [4, 2],
-    [0, 3],
-    [1, 3],
-    [2, 3],
-    [3, 3],
-    [4, 3],
-    [0, 4],
-    [1, 4],
-    [2, 4],
-    [3, 4],
-    [4, 4]
-]
 // Functions
-function grabindexbycoords(x: number, y: number) {
+function animateframes(interval:number,frames:any[]) {
+    let runframes = 0
+	while (runframes <= frames.length - 1){
+        frames[runframes].showImage(0)
+        basic.pause(interval)
+        runframes += 1
+    }
+}
+function grabindexbycoords (x: number, y: number) {
     for (let i = 1; i < 26; i++) {
         grabcoordsbyindex(i)
         if (coords[0] == x) {
@@ -43,12 +18,45 @@ function grabindexbycoords(x: number, y: number) {
             }
         }
     }
-    gibc = 0
+gibc = 0
 }
-function grabcoordsbyindex(index: number) {
+function grabcoordsbyindex (index: number) {
     coords = poses[index - 1]
 }
-// More Math
+let poses: number[][] = []
+// Enums
+// Variables
+let gibc = 0
+let coords: number[] = []
+let canaddhealthvar = true
+coords = [0, 0]
+poses = [
+[0, 0],
+[1, 0],
+[2, 0],
+[3, 0],
+[4, 0],
+[0, 1],
+[1, 1],
+[2, 1],
+[3, 1],
+[4, 1],
+[0, 2],
+[1, 2],
+[2, 2],
+[3, 2],
+[4, 2],
+[0, 3],
+[1, 3],
+[2, 3],
+[3, 3],
+[4, 3],
+[0, 4],
+[1, 4],
+[2, 4],
+[3, 4],
+[4, 4]
+]
 namespace Math {
     /**
      * Outputs a factorial.
@@ -78,18 +86,17 @@ namespace Math {
     //% block="sigma min $min max $max"
     export function sigma(min: number,max: number) {
         let addby = min
-        let answer = min
+        let answer2 = min
         if (min <= 0||max <= 0) {
             return 0;
         }
         while (addby <= max - 1) {
             addby += 1
-            answer += addby
+            answer2 += addby
         }
-        return answer;
+        return answer2;
     }
 }
-// More Leds
 namespace led {
     /**
      * Lights a random tile.
@@ -142,7 +149,6 @@ namespace led {
         led.plotBrightness(x, y, transparency)
     }
 }
-// Extra Leds
 namespace extraLed {
     /**
      * Finds coords of a led in a table using a number instead of position.
@@ -221,5 +227,13 @@ namespace extraLed {
         }
         grabindexbycoords(numx, numy)
         return gibc;
+    }
+    /**
+     * Animates a sequence of images with a certain interval.
+     */
+    //% blockId="specialanimateimages"
+    //% block="animate images $table with interval $interval"
+    export function animateimages(interval:number,table:any[]) {
+        animateframes(interval,table)
     }
 }

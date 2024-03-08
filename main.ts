@@ -245,4 +245,33 @@ namespace extraLed {
             animateframes(interval, table)
         }
     }
+    /**
+     * Animates a sequence of 1 pixel images with a certain interval.
+     */
+    //% blockId="specialanimatepixel"
+    //% block="animate pixel $table with interval $interval ,$repeat times"
+    export function animatepixel(interval: number, table: number[], repeat: number) {
+        if (repeat <= -1) {
+            return
+        }
+        if (repeat == 0) {
+            let runframes = 0
+            while (runframes <= table.length - 1) {
+                let pixel = table[runframes]
+                extraLed.plotledbynumber(pixel)
+                basic.pause(interval)
+                runframes += 1
+            }
+            return
+        }
+        for (let i = 0; i < repeat; i++) {
+            let runframes = 0
+            while (runframes <= table.length - 1) {
+                let pixel = table[runframes]
+                extraLed.plotledbynumber(pixel)
+                basic.pause(interval)
+                runframes += 1
+            }
+        }
+    }
 }

@@ -260,7 +260,7 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
-                if (runframes <= table.length - 2){
+                if (runframes == table.length - 2){
                     if (deleteonend == false){
                         return
                     }
@@ -276,7 +276,7 @@ namespace extraLed {
                 let pixel = table[runframes]
                 extraLed.plotledbynumber(pixel)
                 basic.pause(interval)
-                if (runframes <= table.length - 2) {
+                if (runframes == table.length - 2) {
                     if (deleteonend == false) {
                         return
                     }

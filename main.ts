@@ -249,7 +249,7 @@ namespace extraLed {
      * Animates a sequence of 1 pixel images with a certain interval.
      */
     //% blockId="specialanimatepixel"
-    //% block="animate pixel $table with interval $interval ,$repeat times"
+    //% block="animate pixel $table with interval $interval ,$repeat times, delete on end $deleteonend"
     export function animatepixel(interval: number, table: number[], repeat: number, deleteonend: boolean) {
         if (repeat <= -1) {
             return

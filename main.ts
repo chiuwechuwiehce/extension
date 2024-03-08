@@ -233,7 +233,7 @@ namespace extraLed {
      */
     //% blockId="specialanimateimages"
     //% block="animate images $table with interval $interval ,$repeat times"
-    export function animateimages(interval:number,table:any[],repeat:number) {
+    export function animateimages(interval:number,table:Image[],repeat:number) {
         if (repeat <= -1){
             return
         }

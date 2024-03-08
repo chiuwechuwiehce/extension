@@ -232,8 +232,17 @@ namespace extraLed {
      * Animates a sequence of images with a certain interval.
      */
     //% blockId="specialanimateimages"
-    //% block="animate images $table with interval $interval"
-    export function animateimages(interval:number,table:any[]) {
-        animateframes(interval,table)
+    //% block="animate images $table with interval $interval ,$repeat times"
+    export function animateimages(interval:number,table:any[],repeat:number) {
+        if (repeat <= -1){
+            return
+        }
+        if (repeat == 0){
+            animateframes(interval, table)
+            return
+        }
+        for (let i = 0; i < repeat; i++) {
+            animateframes(interval, table)
+        }
     }
 }

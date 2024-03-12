@@ -1,15 +1,5 @@
 // Functions
 let coords = [0, 0]
-function showpixelimg(pixelimga:number[]){
-    let runframes22 = 0
-    while (runframes22 <= pixelimga.length - 1) {
-        let yes = pixelimga[runframes22]
-        let cdwf = poses[yes - 1]
-        led.plot(cdwf[0], cdwf[1])
-        runframes22 += 1
-    }
-}
-showpixelimg([5])
 function animatepixelimgs(interval:number,pixelimgs:number[][]){
     let runframes = 0
     while (runframes <= pixelimgs.length - 1) {

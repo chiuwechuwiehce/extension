@@ -1,12 +1,18 @@
 // Functions
+let coords = [0, 0]
+function showpixelimg(pixelimga:number[]){
+    let runframes22 = 0
+    while (runframes22 <= pixelimga.length - 1) {
+        let yes = pixelimga[runframes22]
+        let cdwf = poses[yes - 1]
+        led.plot(cdwf[0], cdwf[1])
+        runframes22 += 1
+    }
+}
+showpixelimg([5])
 function animatepixelimgs(interval:number,pixelimgs:number[][]){
     let runframes = 0
     while (runframes <= pixelimgs.length - 1) {
-        let current = pixelimgs[runframes]
-        let runframes2 = 0
-        while (runframes2 <= current.length - 1) {
-            extraLed.plotledbynumber(current[runframes2])
-        }
         basic.pause(interval)
         runframes += 1
     }
@@ -39,9 +45,7 @@ let poses: number[][] = []
 // Enums
 // Variables
 let gibc = 0
-let coords: number[] = []
 let canaddhealthvar = true
-coords = [0, 0]
 poses = [
 [0, 0],
 [1, 0],

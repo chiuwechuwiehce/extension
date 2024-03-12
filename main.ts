@@ -298,4 +298,12 @@ namespace extraLed {
             }
         }
     }
+    /**
+     * Animates a sequence of 1 pixel images with a certain interval.
+     */
+    //% blockId="specialanimatepixelimg"
+    //% block="animate pixelimgs $pixelimgss with interval $interval"
+    export function animatepixelimg(interval:number,pixelimgss:number[][]){
+        animatepixelimgs(interval,pixelimgss)
+    }
 }

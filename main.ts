@@ -1,4 +1,16 @@
 // Functions
+function animatepixelimgs(interval:number,pixelimgs:number[][]){
+    let runframes = 0
+    while (runframes <= pixelimgs.length - 1) {
+        let current = pixelimgs[runframes]
+        let runframes2 = 0
+        while (runframes2 <= current.length - 1) {
+            extraLed.plotledbynumber(current[runframes2])
+        }
+        basic.pause(interval)
+        runframes += 1
+    }
+}
 function animateframes(interval:number,frames:Image[]) {
     let runframes = 0
 	while (runframes <= frames.length - 1){

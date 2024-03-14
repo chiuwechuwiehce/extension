@@ -1,5 +1,12 @@
 // Functions
 let coords = [0, 0]
+function pixlimg(tabel:number[]){
+    let runframes = 0
+    while (runframes <= tabel.length - 1) {
+        extraLed.plotledbynumber(tabel[runframes])
+        runframes += 1
+    }
+}
 function animatepixelimgs(interval:number,pixelimgs:number[][]){
     let runframes = 0
     while (runframes <= pixelimgs.length - 1) {
@@ -299,5 +306,13 @@ namespace extraLed {
     //% block="animate pixelimgs $pixelimgss with interval $interval"
     export function animatepixelimg(interval:number,pixelimgss:number[][]){
         animatepixelimgs(interval,pixelimgss)
+    }
+    /**
+     * Uses a list of pixel indexes to make an image.
+     */
+    //% blockId="specialpixelimg"
+    //% block="pixel img $tabel"
+    export function pixelimg(tabel:number[]) {
+        pixlimg(tabel)
     }
 }

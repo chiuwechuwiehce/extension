@@ -8,10 +8,10 @@ function pixlimg(tabel:number[]){
     }
 }
 function animatepixelimgs(interval:number,pixelimgs:number[][]){
-    let runframes = 0
-    while (runframes <= pixelimgs.length - 1) {
+    for (let i = 0; i < pixelimgs.length; i++) {
+        let thenew = pixelimgs[i-1]
+        pixlimg(thenew)
         basic.pause(interval)
-        runframes += 1
     }
 }
 function animateframes(interval:number,frames:Image[]) {
@@ -304,7 +304,7 @@ namespace extraLed {
      */
     //% blockId="specialanimatepixelimg"
     //% block="animate pixelimgs $pixelimgss with interval $interval"
-    export function animatepixelimg(interval:number,pixelimgss:number[][]){
+    export function animatepixelimg(interval:number,pixelimgss:any[]){
         animatepixelimgs(interval,pixelimgss)
     }
     /**

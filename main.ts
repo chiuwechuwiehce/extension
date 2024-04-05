@@ -310,9 +310,17 @@ namespace extraLed {
     /**
      * Uses a list of pixel indexes to make an image.
      */
+    //% blockId="specialshowpixelimg"
+    //% block="show pixel img $tabel"
+    export function showpixelimg(tabel:any[]) {
+        pixlimg(tabel)
+    }
+    /**
+     * Uses a list of pixel indexes to make an image.
+     */
     //% blockId="specialpixelimg"
     //% block="pixel img $tabel"
     export function pixelimg(tabel:number[]) {
-        pixlimg(tabel)
+        return tabel
     }
 }
